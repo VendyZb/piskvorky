@@ -121,7 +121,7 @@ p {
   background-color: #0090e9;
 }
 
-/* Responzivita - mobil*/
+/* responzivita - mobil*/
 @media screen and (max-width: 480px) {
   .hlavni.obal {
     width: 95%;
@@ -143,7 +143,24 @@ p {
   }
 }
 
+/* responzivita -pc*/
+@media screen and (min-width: 1024px) {
+  .hlavni.obal {
+    max-width: 500px;
+  }
 
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+}
 
 
 
