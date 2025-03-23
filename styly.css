@@ -1,44 +1,150 @@
-/*hlavní podklad: přechod pozadí z fialové na růžovou*/
+/* přechod pozadí */
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   margin: 0;
   padding: 0;
+  
+  /* vycentrování */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* na celou výšku obrazovky */
 }
 
-/*obal - section*/
+/* hlavní obal */
 .hlavni.obal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
-  margin: 40px;
-  padding: 15px;
+  width: 90%; /* responzivita */
+  max-width: 400px; /* max šířka */
+  padding: 0;
   background-color: #283e50;
-  border-radius: 15px;
-
+  border-radius: 8px;
 }
 
-/*nadpis Piškvorky*/
+/* obrázek piškvorek */
+img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+/* nadpis Piškvorky */
 h1 {
   font-family: "Lobster";
   font-size: 40px;
+  margin: 20px 0;
 }
 
-/*uvodni text*/
+/* úvodní text */
 p {
-  font-size: 20px;
+  font-size: 15px;
+  text-align: center;
   color: #ffffff;
   padding: 10px;
-
+  line-height: 1.5;
+  margin-top: 5px;
 }
 
-/*uvodni obrázek piškvorek*/
-img {
+.image-container img {
   width: 100%;
 }
 
-/*Poznámka napříště - musím použít flexbox a napsat do html s div, na zarovnání obrázku a na tlačítka*/
+/* vycentrování textu */
+.text-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* seznam tlačítek */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menu li {
+  width: 100%;
+  display: flex;
+}
+
+/* zarovnání tlačítek */
+.menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* responzivita-šířka*/
+  max-width: 400px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+/* tlačítko Pravidla */
+.pravidla {
+  background-color: #1fcca4;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+}
+
+.pravidla:hover {
+  background-color: #1cbb96;
+}
+
+/* tlačítko Začít hrát */
+.start {
+  background-color: #0197f6;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+
+  border-top: 2px solid #283e50
+}
+
+.start:hover {
+  background-color: #0090e9;
+}
+
+/* Responzivita - mobil*/
+@media screen and (max-width: 480px) {
+  .hlavni.obal {
+    width: 95%;
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 32px; /* nadpis na mobilech */
+  }
+
+  p {
+    font-size: 14px; 
+  }
+
+  .menu a {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
