@@ -143,5 +143,107 @@ p {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+  color: white;
+}
+
+.game {
+  max-width: 80vmin;
+  min-width: 320px;
+  margin: 30px auto;
+  padding: 0 10px;
+}
+
+.game-title {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.symbol {
+  width: 28px;
+  height: 28px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.icon-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button.green {
+  background-color: #1fcca4;
+}
+
+.icon-button.green:hover {
+  background-color: #1cbb96;
+}
+
+.icon-button.blue {
+  background-color: #0197f6;
+}
+
+.icon-button.blue:hover {
+  background-color: #0090e9;
+}
+
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border: 2px solid #283e50;
+}
+
+.square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(to bottom, #c1b2dd, #d4bddd);
+  border: 1px solid #283e50;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.square:hover,
+.square:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  outline: none;
+}
 
 
